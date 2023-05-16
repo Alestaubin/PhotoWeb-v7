@@ -39,6 +39,7 @@ main {
   border-radius: 0;
 }
 
+.btn,
 .btn-toggle {
   display: inline-flex;
   align-items: center;
@@ -48,6 +49,9 @@ main {
   background-color: transparent;
   border: 0;
 }
+
+.btn:hover,
+.btn:focus,
 .btn-toggle:hover,
 .btn-toggle:focus {
   color: rgba(0, 0, 0, .85);

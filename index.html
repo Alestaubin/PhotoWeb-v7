@@ -33,7 +33,7 @@
 
 <main>
   <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
-    <a href="/home/index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <a href="/index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
       <span class="fs-5 fw-semibold">Alexandre St-Aubin</span>
     </a>
     <ul class="list-unstyled ps-0">
@@ -49,41 +49,41 @@
           </ul>
         </div>
       </li>
-      <li class="mb-1">
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-          About
-        </button>
-        <div class="collapse" id="dashboard-collapse">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a href="#" class="link-dark rounded">Personal</a></li>
-            <li><a href="#" class="link-dark rounded">Professional</a></li>
-          </ul>
-        </div>
-      </li>
-      <li class="mb-1">
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-          Contact
-        </button>
-        <div class="collapse" id="orders-collapse">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a href="#" class="link-dark rounded">Personal</a></li>
-            <li><a href="#" class="link-dark rounded">Professional</a></li>
-          </ul>
-        </div>
-        </div>
-      </li>
-    
+      <li><a href="/About/about.html" class="btn link-dark rounded" style="text-decoration: none;">About</a></li>
+      <li><a href="/Contact/contact.html" class="btn link-dark rounded" style="text-decoration: none;">Contact</a></li>    
     </ul>
   </div>
 
   <div class="b-example-divider"></div>
 
   <div class="p-4 p-md-5 pt-5 overflow-auto">
-    <p>
-        
-    </p>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/Sports/bike/BikeRace05-2023-86.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/Sports/bike/BikeRace05-2023-9.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/Sports/bike/BikeRace05-2023-87.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button> 
+    </div>
   </div>
 
-</main>
-</body>
+  </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="/Javascript/script.js"></script>
+  </body>
 </html>
