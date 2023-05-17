@@ -1,3 +1,11 @@
+
+@import url('https://fonts.cdnfonts.com/css/hoefler-text');
+
+*{
+  font-family: 'Hoefler';
+}
+
+
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -116,4 +124,5 @@ img{
   font-weight: 500;
   border-bottom: 3px solid #244;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
