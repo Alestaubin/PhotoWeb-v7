@@ -106,3 +106,14 @@ img{
   padding-bottom: 6px;
   border-radius: 2px;
 }
+.header h3{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  border-bottom: 3px solid #244;
+  margin-bottom: 30px;
+}
