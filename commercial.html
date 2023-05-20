@@ -7,8 +7,7 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Alexandre St-Aubin</title>
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -23,11 +22,42 @@
           font-size: 3.5rem;
         }
       }
+        img {
+            -webkit-filter: brightness(100%);
+        }
+
+        img:hover {
+            -webkit-filter: brightness(70%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-size: large;
+      color: white;
+    }
+
+    .image-container:hover .image-label {
+      opacity: 1;
+    }
+
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="/styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
   </head>
   <body>
 
@@ -56,38 +86,36 @@
   </div>
 
   <div class="b-example-divider"></div>
-  
   <div class="container text-center overflow-auto">
     <div class="header">
-      <h3>Sports Photography</h3>
+      <h3>Commercial Work</h3>
     </div>
+    
     <div class="row">
-      <div class="col">
-          <div class="image-container">
-              <a href="/sports/courseDuClub.html" id="courseDuClub">
-                <img src="/images/Sports/ski/SkiRace-6.jpg" alt="ski">
-              </a>
-              <label for="courseDuClub" class="image-label">Course du Club de Ski Sutton</label>
-          </div>
-      </div>
-      <div class="col">
-          <div class="image-container">
-              <a href="/sports/grandPrixVelocite.html" id="grandPrixVelocite">
-                <img src="/images/Sports/bike/BikeRace05-2023-85.jpg" alt="gerts">
-              </a>
-              <label for="grandPrixVelocite" class="image-label">Grand Prix Vélocité 2023</label>
-          </div>
-      </div>
+        <div class="col">
+            <div class="image-container">
+                <a href="/commercial/vitresEdudiant" id="vitres">
+                  <img src="/images/commercial/vitresEtudiant/VitresEtudiant-13.jpg" alt="vitre">
+                </a>
+                <label for="vitres" class="image-label">VITRES ÉTUDIANTS</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="image-container">
+                <a href="/commercial/Gerts.html" id="vitres">
+                  <img src="/images/commercial/Gerts/DSCF0632.jpg" alt="gerts">
+                </a>
+                <label for="vitres" class="image-label">GERTS CAFÉ</label>
+            </div>
+        </div>
+    </div>
+
   </div>
 
-</div>
-
-  </body>
-  
-  </html>
   </main>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Javascript/script.js"></script>
+    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="/Javascript/script.js"></script>
   </body>
 </html>
