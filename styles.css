@@ -174,3 +174,8 @@ color: white;
 .image-container:hover .image-label {
 opacity: 1;
 }
+
+.col {
+  padding-left: 3px;
+  padding-right: 3px;
+}
