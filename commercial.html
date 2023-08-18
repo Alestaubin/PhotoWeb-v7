@@ -60,39 +60,44 @@
 
   </head>
   <body>
-
-<main>
-  <div  class="p-3 bg-white" style="max-width: 280px;">
-    <a href="/index.html" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-      <span class="fs-5 fw-semibold">Alexandre St-Aubin</span>
-    </a>
-    <ul class="list-unstyled ps-0">
-      <li class="mb-1">
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-          Photos
-        </button>
-        <div class="collapse show" id="home-collapse">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a href="/commercial.html" class="link-dark rounded">Commercial work</a></li>
-            <li><a href="/sports.html" class="link-dark rounded">Sports Photography</a></li>
-            <li><a href="/events.html" class="link-dark rounded">Event Photography</a></li>
-            <li><a href="/index.html" class="link-dark rounded">Portfolio</a></li>
-          </ul>
-        </div>
-      </li>
-      <li><a href="/about.html" class="btn link-dark rounded" style="text-decoration: none;">About</a></li>
-      <li><a href="/contact.html" class="btn link-dark rounded" style="text-decoration: none;">Contact</a></li>    
-    </ul>
-  </div>
-
-  <div class="b-example-divider"></div>
-  <div class="container text-center overflow-auto p-0">
-    <div class="header">
-      <h3>Commercial Work</h3>
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/index.html">Alexandre St-Aubin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/commercial.html">Commercial work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sports.html">Sports Photography</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/events.html">Event Photography</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
+<main>
+  <div class="container text-center overflow-auto p-2">
+
+    <h3>Commercial Work</h3>
     
     <div class="row">
-        <div class="col">
+        <div class="col-md">
             <div class="image-container">
                 <a href="/commercial/vitresEdudiant.html" id="vitres">
                   <img src="/images/commercial/vitresEtudiant/VitresEtudiant-13.jpg" alt="vitre">
@@ -100,7 +105,7 @@
                 <label for="vitres" class="image-label">VITRES ÉTUDIANTS</label>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md">
             <div class="image-container">
                 <a href="/commercial/Gerts.html" id="vitres">
                   <img src="/images/commercial/Gerts/DSCF0632.jpg" alt="gerts">
