@@ -9,6 +9,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  overflow-y: hidden;
 }
 
 html {
@@ -21,8 +22,8 @@ main {
   height: 100vh;
   height: -webkit-fill-available;
   max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .b-example-divider {
@@ -169,6 +170,7 @@ opacity: 0;
 transition: opacity 0.3s ease;
 font-size: large;
 color: white;
+pointer-events: none; /* This is important to make the label on the image clickable */
 }
 
 .image-container:hover .image-label {
