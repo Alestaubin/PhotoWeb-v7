@@ -30,6 +30,16 @@
     <link href="/styles.css" rel="stylesheet">
   </head>
   <body>
+    <script>
+      // Load navigation bar
+      window.onload = function() {
+          fetch('/navbar.html')
+              .then(response => response.text())
+              .then(html => {
+                  document.getElementById('navbar').innerHTML = html;
+              });
+      };
+    </script>
     <!-- Bootstrap Navbar -->
     <div id="navbar"></div>
 <main>
@@ -99,15 +109,6 @@
     </div>
 </div>
 </main>
-<script>
-  // Load navigation bar
-  window.onload = function() {
-      fetch('/navbar.html')
-          .then(response => response.text())
-          .then(html => {
-              document.getElementById('navbar').innerHTML = html;
-          });
-  };
-</script>
+
 </body>
 </html>
