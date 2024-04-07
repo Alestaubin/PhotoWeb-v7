@@ -27,6 +27,16 @@
   <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+  <script>
+    // Load navigation bar
+    window.onload = function() {
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            });
+    };
+  </script>
   <div id="navbar"></div>
   <main>
     <div id="outer-container" class="d-flex justify-content-center overflow-auto align-middle mb-5" style="width: 100%;">
@@ -101,15 +111,5 @@
   <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/Javascript/script.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>
-  <script>
-    // Load navigation bar
-    window.onload = function() {
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar').innerHTML = html;
-            });
-    };
-  </script>
 </body>
 </html>
