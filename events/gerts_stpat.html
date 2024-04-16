@@ -28,18 +28,18 @@
     
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
+    <script>
+        // Load navigation bar
+        window.onload = function() {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar').innerHTML = html;
+                });
+        };
+      </script>
   </head>
   <body>
-    <script>
-      // Load navigation bar
-      window.onload = function() {
-          fetch('/navbar.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.getElementById('navbar').innerHTML = html;
-              });
-      };
-    </script>
     <div id="navbar"></div>
 <main>
   <div class="container text-center overflow-auto p-2 mb-5">
