@@ -10,22 +10,6 @@
     <title>Alexandre St-Aubin</title>
     <!-- Bootstrap core CSS -->
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
     
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
@@ -48,7 +32,7 @@
               "/images/NightEvents/gerts_stpat/gerts-11.jpg",
               "/images/NightEvents/gerts_stpat/gerts-12.jpg"
             ];
-            
+
       // Load navigation bar
       window.onload = function() {
         fetch('/navbar.html')
@@ -58,6 +42,7 @@
             
             loadImages(imageUrls, 'gerts_stpat');
           });
+
           // fill modal with images
           var carouselItems = '';
           for (var i = 0; i < imageUrls.length; i++) {
@@ -72,6 +57,7 @@
           // Update the carousel inner HTML with the generated markup
           $('#dynamic-carousel').html(carouselItems);
       };
+
       function fetchModal() {
         fetch('/modal.html')
           .then(response => response.text())
@@ -79,10 +65,42 @@
             document.getElementById('myModal').innerHTML = html;
           });
       }
+      
       function openModal() {
         // Trigger click event on the button that opens the modal
         $('#myModal').modal('show');
       };
+
+      function loadImages(imageUrls, altText) {
+        var imageDisplay = document.getElementById('image_display');
+        var currentRow;
+    
+        imageUrls.forEach(function(url, index) {
+            if (index % 2 === 0) {
+                currentRow = document.createElement('div');
+                currentRow.className = 'row p-0';
+                imageDisplay.appendChild(currentRow);
+            }
+
+            var img = document.createElement('img');
+            img.src = url;
+            img.alt = altText;
+            
+            // Add an event listener to each image to open the modal on click
+            img.addEventListener('click', function() {
+                openModal(url);
+            });
+
+            var link = document.createElement('a');
+            link.href = url;
+            link.target = '_blank';
+            link.appendChild(img);
+            var column = document.createElement('div');
+            column.className = 'col-md p-1';
+            column.appendChild(link);
+            currentRow.appendChild(column);
+        });
+      }
     </script>
   </head>
   <body>
