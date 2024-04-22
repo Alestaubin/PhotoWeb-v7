@@ -13,7 +13,6 @@
     
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/Javascript/imageLoader.js"></script>
@@ -42,6 +41,7 @@
             
             loadImages(imageUrls, 'gerts_stpat');
           });
+          fetchModal();
 
           // fill modal with images
           var carouselItems = '';
@@ -65,7 +65,7 @@
             document.getElementById('myModal').innerHTML = html;
           });
       }
-      
+
       function openModal() {
         // Trigger click event on the button that opens the modal
         $('#myModal').modal('show');
