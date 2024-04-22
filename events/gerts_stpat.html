@@ -41,21 +41,7 @@
             
             loadImages(imageUrls, 'gerts_stpat');
           });
-          fetchModal();
-
-          // fill modal with images
-          var carouselItems = '';
-          for (var i = 0; i < imageUrls.length; i++) {
-              var activeClass = (i === 0) ? 'active' : ''; // Add 'active' class to the first item
-              carouselItems += '<div class="item ' + activeClass + '">';
-              carouselItems += '<img src="' + imageUrls[i] + '" alt="...">';
-              carouselItems += '<div class="carousel-caption">';
-              // Add caption or other elements if needed
-              carouselItems += '</div>';
-              carouselItems += '</div>';
-          }
-          // Update the carousel inner HTML with the generated markup
-          $('#dynamic-carousel').html(carouselItems);
+          //fetchModal();
       };
 
       //function fetchModal() {
@@ -67,6 +53,19 @@
       //}
 
       function openModal() {
+        // fill modal with images
+        var carouselItems = '';
+          for (var i = 0; i < imageUrls.length; i++) {
+              var activeClass = (i === 0) ? 'active' : ''; // Add 'active' class to the first item
+              carouselItems += '<div class="item ' + activeClass + '">';
+              carouselItems += '<img src="' + imageUrls[i] + '" alt="...">';
+              carouselItems += '<div class="carousel-caption">';
+              // Add caption or other elements if needed
+              carouselItems += '</div>';
+              carouselItems += '</div>';
+          }
+        // Update the carousel inner HTML with the generated markup
+        $('#dynamic-carousel').html(carouselItems);
         // Trigger click event on the button that opens the modal
         $('#myModal').modal('show');
       };
@@ -106,44 +105,43 @@
   <body>
     <div id="navbar"></div>
     <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol>
 
-<div class="modal-dialog">
-  <!-- Modal content-->
-  <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-      <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
+                  <!-- Wrapper for slides -->
+                  <div id="dynamic-carousel" class="carousel-inner" role="listbox">
+                      <!-- Carousel items will be dynamically added here -->
+                  </div>
 
-              <!-- Wrapper for slides -->
-              <div id="dynamic-carousel" class="carousel-inner" role="listbox">
-                  <!-- Carousel items will be dynamically added here -->
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
               </div>
-
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-              </a>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
       </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-  </div>
-</div>
+    </div>
     </div>
     <main>
       <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
