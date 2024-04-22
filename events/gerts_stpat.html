@@ -26,74 +26,66 @@
         }
       }
     </style>
-
     
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
     <script>
-        // Load navigation bar
-        window.onload = function() {
-            fetch('/navbar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('navbar').innerHTML = html;
-                });
-        };
-    </script>
-    <script>
-      // JavaScript code to dynamically populate the carousel with images
-      //$(document).ready(function() {
+      // Load navigation bar
       window.onload = function() {
-          // Retrieve the list of image URLs from the current page
-          var imageUrls = [
-              "images/NightEvents/gerts_stpat/gerts-1.jpg",
-              "images/NightEvents/gerts_stpat/gerts-2.jpg",
-              "images/NightEvents/gerts_stpat/gerts-3.jpg",
-              "images/NightEvents/gerts_stpat/gerts-4.jpg",
-              "images/NightEvents/gerts_stpat/gerts-5.jpg",
-              "images/NightEvents/gerts_stpat/gerts-6.jpg",
-              "images/NightEvents/gerts_stpat/gerts-7.jpg",
-              "images/NightEvents/gerts_stpat/gerts-8.jpg",
-              "images/NightEvents/gerts_stpat/gerts-9.jpg",
-              "images/NightEvents/gerts_stpat/gerts-10.jpg",
-              "images/NightEvents/gerts_stpat/gerts-11.jpg",
-              "images/NightEvents/gerts_stpat/gerts-12.jpg"
-              // Add more image URLs as needed
-          ];
-          var display_items = ''; 
-          for (var i = 0; i < imageUrls.length; i++) {
-            if (i % 2 == 0) {
-              display_items += '<div class="row p-0">';
-              j = 0; 
-            }
-            display_items += '<div class="col-md p-1">';
-            display_items += '<a href="' + imageUrls[i] + '" target="_blank"> <img src="' + imageUrls[i] + '" alt="bda"> </a>';
-            display_items += '</div>';
-            j++;
-            if (j == 2) {
-              display_items += '</div>';
-            }
-          }
-          //update the image display
-            document.addEventListener("DOMContentLoaded", function() {
-              document.getElementById("image-display").innerHTML = display_items;
-            });
-          //$('#dynamic-carousel').html(carouselItems);
+        fetch('/navbar.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+            loadImages();
+          });
       };
-      </script>
+  
+      function loadImages() {
+        var imageUrls = [
+          "images/NightEvents/gerts_stpat/gerts-1.jpg",
+          "images/NightEvents/gerts_stpat/gerts-2.jpg",
+          "images/NightEvents/gerts_stpat/gerts-3.jpg",
+          "images/NightEvents/gerts_stpat/gerts-4.jpg",
+          "images/NightEvents/gerts_stpat/gerts-5.jpg",
+          "images/NightEvents/gerts_stpat/gerts-6.jpg",
+          "images/NightEvents/gerts_stpat/gerts-7.jpg",
+          "images/NightEvents/gerts_stpat/gerts-8.jpg",
+          "images/NightEvents/gerts_stpat/gerts-9.jpg",
+          "images/NightEvents/gerts_stpat/gerts-10.jpg",
+          "images/NightEvents/gerts_stpat/gerts-11.jpg",
+          "images/NightEvents/gerts_stpat/gerts-12.jpg"
+        ];
+  
+        var imageDisplay = document.getElementById('image_display');
+  
+        imageUrls.forEach(function(url) {
+          var img = document.createElement('img');
+          img.src = url;
+          img.alt = 'bda';
+          var link = document.createElement('a');
+          link.href = url;
+          link.target = '_blank';
+          link.appendChild(img);
+          var column = document.createElement('div');
+          column.className = 'col-md p-1';
+          column.appendChild(link);
+          imageDisplay.appendChild(column);
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="navbar"></div>
-  <main>
-    <div id="image-display" class="container text-center overflow-auto p-2 mb-5">
-      <h3>Saint-Patrick's at Gerts - 2024 </h3>
-    </div>
-  </main>
-
+    <main>
+      <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
+        <h3>Saint-Patrick's at Gerts - 2024</h3>
+        <div class="row p-0"></div>
+      </div>
+    </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Javascript/script.js"></script>
-    
   </body>
+
 </html>
 <!--
 <div class="row p-0">
