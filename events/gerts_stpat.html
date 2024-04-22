@@ -53,20 +53,18 @@
 
       function openModal(url) {
         // fill modal with images
-        /*var carouselItems = '';
+        var carouselItems = '';
           for (var i = 0; i < imageUrls.length; i++) {
-            if (imageUrls[i] === url) {
-              var activeClass = (i === 0) ? 'active' : ''; // Add 'active' class to the first item
-              carouselItems += '<div class="item ' + activeClass + '">';
-              carouselItems += '<img src="' + imageUrls[i] + '" alt="...">';
-              carouselItems += '<div class="carousel-caption">';
-              // Add caption or other elements if needed
-              carouselItems += '</div>';
-              carouselItems += '</div>';
-              }
+            
+            var activeClass = (imageUrls[i] === url) ? 'active' : ''; 
+           
+            carouselItems += '<div class="carousel-item ' + activeClass + '">';
+            carouselItems += '<img src="' + imageUrls[i] + '" class="d-block w-100" alt="...">';
+            carouselItems += '</div>';
+              
           }
         // Update the carousel inner HTML with the generated markup
-        $('#dynamic-carousel').html(carouselItems);*/
+        $('#carousel-contents').html(carouselItems);
         // Trigger click event on the button that opens the modal
         $('#myModal').modal('show');
       };
