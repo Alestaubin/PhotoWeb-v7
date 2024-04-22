@@ -3,23 +3,29 @@ function loadImages(imageUrls, altText) {
     var currentRow;
  
     imageUrls.forEach(function(url, index) {
-      if (index % 2 === 0) {
-        currentRow = document.createElement('div');
-        currentRow.className = 'row p-0';
-        imageDisplay.appendChild(currentRow);
-      }
- 
-      var img = document.createElement('img');
-      img.src = url;
-      img.alt = altText;
-      var link = document.createElement('a');
-      link.href = url;
-      link.target = '_blank';
-      link.appendChild(img);
-      var column = document.createElement('div');
-      column.className = 'col-md p-1';
-      column.appendChild(link);
-      currentRow.appendChild(column);
+        if (index % 2 === 0) {
+            currentRow = document.createElement('div');
+            currentRow.className = 'row p-0';
+            imageDisplay.appendChild(currentRow);
+        }
+
+        var img = document.createElement('img');
+        img.src = url;
+        img.alt = altText;
+        
+        // Add an event listener to each image to open the modal on click
+        img.addEventListener('click', function() {
+            openModal(url);
+        });
+
+        var link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        link.appendChild(img);
+        var column = document.createElement('div');
+        column.className = 'col-md p-1';
+        column.appendChild(link);
+        currentRow.appendChild(column);
     });
+
   }
- 

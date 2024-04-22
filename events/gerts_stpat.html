@@ -29,6 +29,9 @@
     
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/Javascript/imageLoader.js"></script>
     <script>
       // Load navigation bar
@@ -53,11 +56,39 @@
             ];
             loadImages(imageUrls, 'gerts_stpat');
           });
+          // fill modal with images
+          var carouselItems = '';
+          for (var i = 0; i < imageUrls.length; i++) {
+              var activeClass = (i === 0) ? 'active' : ''; // Add 'active' class to the first item
+              carouselItems += '<div class="item ' + activeClass + '">';
+              carouselItems += '<img src="' + imageUrls[i] + '" alt="...">';
+              carouselItems += '<div class="carousel-caption">';
+              // Add caption or other elements if needed
+              carouselItems += '</div>';
+              carouselItems += '</div>';
+          }
+          // Update the carousel inner HTML with the generated markup
+          $('#dynamic-carousel').html(carouselItems);
       };
+      function fetchModal() {
+        fetch('/modal.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('myModal').innerHTML = html;
+          });
+      }
+      function openModal() {
+          // Add event listener to the element that triggers modal opening
+          $('#openSliderBtn').on('click', function() {
+              // Trigger click event on the button that opens the modal
+              $('#myModal').modal('show');
+          });
+      });
     </script>
   </head>
   <body>
     <div id="navbar"></div>
+    <div class="modal fade" id="myModal" role="dialog"></div>
     <main>
       <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
         <h3>Saint-Patrick's at Gerts - 2024</h3>
@@ -68,52 +99,3 @@
   </body>
 
 </html>
-<!--
-<div class="row p-0">
-  <div class="col-md p-1">
-    <a href="/images/NightEvents/gerts_stpat/gerts-1.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-1.jpg" alt="bda"> </a>
-  </div>
-  <div class="col-md p-1">
-    <a href="/images/NightEvents/gerts_stpat/gerts-2.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-2.jpg" alt="bda"> </a>
-  </div>
-</div>
-<div class="row p-0">
-  <div class="col-md p-1">
-    <a href="/images/NightEvents/gerts_stpat/gerts-3.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-3.jpg" alt="bda"> </a>
-  </div>
-  <div class="col-md p-1">
-    <a href="/images/NightEvents/gerts_stpat/gerts-4.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-4.jpg" alt="bda"> </a>
-  </div>
-</div>
-<div class="row p-0">
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-5.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-5.jpg" alt="bda"> </a>
-    </div>
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-6.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-6.jpg" alt="bda"> </a>
-    </div>
-  </div>
-  <div class="row p-0">
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-7.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-7.jpg" alt="bda"> </a>
-    </div>
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-8.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-8.jpg" alt="bda"> </a>
-    </div>
-  </div>
-  <div class="row p-0">
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-9.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-9.jpg" alt="bda"> </a>
-    </div>
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-10.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-10.jpg" alt="bda"> </a>
-    </div>
-  </div>
-  <div class="row p-0">
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-11.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-11.jpg" alt="bda"> </a>
-    </div>
-    <div class="col-md p-1">
-      <a href="/images/NightEvents/gerts_stpat/gerts-12.jpg" target="_blank"> <img src="/images/NightEvents/gerts_stpat/gerts-12.jpg" alt="bda"> </a>
-    </div>
-  </div>
