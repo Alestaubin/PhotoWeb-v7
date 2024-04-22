@@ -7,111 +7,39 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Alexandre St-Aubin</title>
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Javascript/imageLoader.js"></script>
     <script>
-      // Load navigation bar
-      window.onload = function() {
-          fetch('/navbar.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.getElementById('navbar').innerHTML = html;
-              });
-      };
+      var imageUrls = [
+                "/images/commercial/hec5/hec5-1.jpg",
+                "/images/commercial/hec5/hec5-2.jpg",
+                "/images/commercial/hec5/hec5-3.jpg",
+                "/images/commercial/hec5/hec5-4.jpg",
+                "/images/commercial/hec5/hec5-5.jpg",
+                "/images/commercial/hec5/hec5-6.jpg",
+                "/images/commercial/hec5/hec5-9.jpg",
+                "/images/commercial/hec5/hec5-8.jpg",
+                "/images/commercial/hec5/hec5-7.jpg",
+                "/images/commercial/hec5/hec5-10.jpg"
+            ];
     </script>
+    <script src="/Javascript/imageLoader.js"></script>
   </head>
   <body>
-    <!-- Bootstrap Navbar -->
-<div id="navbar"></div>
-<main>
-
-    <div class="container text-center overflow-auto p-2 mb-5">
+    <div id="navbar"></div>
+    <div class="modal fade bd-example-modal-xl" id="myModal" role="dialog">
+    </div>
+    <main>
+      <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
         <h3>Comité HEC Groupe 5</h3>
-        <div class="row p-0">
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-1.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-1.jpg" alt="hec">
-            </a>
-          </div>
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-2.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-2.jpg" alt="hec">
-            </a>
-          </div>
-        </div>
-        <!-- Continue replacing images with the new ones here -->
-        <div class="row p-0">
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-3.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-3.jpg" alt="hec">
-            </a>
-          </div>
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-4.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-4.jpg" alt="hec">
-            </a>
-          </div>
-        </div>
-        <div class="row p-0">
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-5.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-5.jpg" alt="hec">
-            </a>
-          </div>
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-6.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-6.jpg" alt="hec">
-            </a>
-          </div>
-        </div>
-        <div class="row p-0">
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-9.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-9.jpg" alt="hec">
-            </a>
-          </div>
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-8.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-8.jpg" alt="hec">
-            </a>
-          </div>
-        </div>
-        <div class="row p-0">
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-7.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-7.jpg" alt="hec">
-            </a>
-          </div>
-          <div class="col-md p-1">
-            <a href="/images/commercial/hec5/hec5-10.jpg" target="_blank">
-              <img src="/images/commercial/hec5/hec5-10.jpg" alt="hec">
-            </a>
-          </div>
-        </div>
       </div>
-  </main>
-
+    </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Javascript/script.js"></script>
-    
   </body>
+
 </html>

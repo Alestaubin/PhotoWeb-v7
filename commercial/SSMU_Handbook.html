@@ -7,85 +7,37 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Alexandre St-Aubin</title>
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Javascript/imageLoader.js"></script>
     <script>
-      // Load navigation bar
-      window.onload = function() {
-          fetch('/navbar.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.getElementById('navbar').innerHTML = html;
-              });
-      };
+      var imageUrls = [
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-1.jpg",
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-2.jpg",
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-7.jpg",
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-8.jpg",
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-3.jpg",
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-4.jpg",
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-5.jpg",
+                "/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-6.jpg"
+            ];
     </script>
+    <script src="/Javascript/imageLoader.js"></script>
   </head>
   <body>
     <div id="navbar"></div>
-<main>
-
-  <div class="container text-center overflow-auto p-2 mb-5">
-
-      <h3>SSMU Handbook</h3>
-
-    <div class="row p-0">
-      <div class="col-md p-1">
-        <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-1.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-1.jpg" alt="bike"> </a>
-      </div>
-      <div class="col-md p-1">
-        <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-2.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-2.jpg" alt="bike"> </a>
-      </div>
-      
+    <div class="modal fade bd-example-modal-xl" id="myModal" role="dialog">
     </div>
-    <div class="row p-0">
-      <div class="col-md p-1">
-        <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-7.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-7.jpg" alt="bike"> </a>
+    <main>
+      <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
+        <h3>SSMU Handbook</h3>
       </div>
-      <div class="col-md p-1">
-        <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-8.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-8.jpg" alt="bike"> </a>
-      </div>
-      
-    </div>
-    <div class="row p-0">
-      <div class="col-md p-1">
-        <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-3.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-3.jpg" alt="bike"> </a>
-      </div>
-      <div class="col-md p-1">
-        <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-4.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-4.jpg" alt="bike"> </a>
-      </div>
-    </div>
-    <div class="row p-0">
-        <div class="col-md p-1">
-          <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-5.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-5.jpg" alt="bike"> </a>
-        </div>
-        <div class="col-md p-1">
-          <a href="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-6.jpg" target="_blank"> <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-6.jpg" alt="bike"> </a>
-        </div>
-      </div>
-  </div>
-  </main>
-
+    </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Javascript/script.js"></script>
-    
   </body>
+
 </html>

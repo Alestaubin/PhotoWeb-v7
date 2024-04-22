@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,113 +8,43 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Alexandre St-Aubin</title>
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Javascript/imageLoader.js"></script>
     <script>
-      // Load navigation bar
-      window.onload = function() {
-          fetch('/navbar.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.getElementById('navbar').innerHTML = html;
-              });
-      };
+      var imageUrls = [
+                "/images/commercial/vitresEtudiant/VitresEtudiant-7.jpg.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-9.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-4.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-8.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-6.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-12.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-26.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-29.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-14.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-28.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-22.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-35.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-33.jpg",
+                "/images/commercial/vitresEtudiant/VitresEtudiant-31.jpg"
+            ];
     </script>
+    <script src="/Javascript/imageLoader.js"></script>
   </head>
   <body>
-    <!-- Bootstrap Navbar -->
     <div id="navbar"></div>
-<main>
-  <div class="container text-center overflow-auto p-2 mb-5">
-
-    <h3>Vitres Étudiants</h3>
-
-    <div class="row p-0">
-      <div class="col-md p-1">
-        <a href="/images/commercial/vitresEtudiant/VitresEtudiant-7.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-7.jpg" alt="vitres"> </a>
+    <div class="modal fade bd-example-modal-xl" id="myModal" role="dialog">
+    </div>
+    <main>
+      <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
+        <h3>Vitres Étudiants</h3>
       </div>
-      <div class="col-md p-1">
-        <a href="/images/commercial/vitresEtudiant/VitresEtudiant-5.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-5.jpg" alt="vitres"> </a>
-      </div>
-    </div>
-    <div class="row p-0">
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-4.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-4.jpg" alt="vitres"> </a>
-        </div>
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-8.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-8.jpg" alt="vitres"> </a>
-        </div>
-    </div>
-
-    <div class="row p-0">
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-6.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-6.jpg" alt="vitres"> </a>
-        </div>
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-12.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-12.jpg" alt="vitres"> </a>
-        </div>
-    </div>
-
-    <div class="row p-0">
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-26.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-26.jpg" alt="vitres"> </a>
-        </div>
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-29.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-29.jpg" alt="vitres"> </a>
-        </div>
-    </div>
-
-    <div class="row p-0">
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-14.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-14.jpg" alt="vitres"> </a>
-        </div>
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-28.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-28.jpg" alt="vitres"> </a>
-        </div>
-    </div>
-
-    <div class="row p-0">
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-22.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-22.jpg" alt="vitres"> </a>
-        </div>
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-35.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-35.jpg" alt="vitres"> </a>
-        </div>
-    </div>
-
-    <div class="row p-0">
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-33.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-33.jpg" alt="vitres"> </a>
-        </div>
-        <div class="col-md p-1">
-          <a href="/images/commercial/vitresEtudiant/VitresEtudiant-31.jpg" target="_blank"> <img src="/images/commercial/vitresEtudiant/VitresEtudiant-31.jpg" alt="vitres"> </a>
-        </div>
-    </div>
-
-  </div>
-  </main>
-
+    </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Javascript/script.js"></script>
-   
   </body>
+
 </html>
