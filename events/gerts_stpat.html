@@ -75,8 +75,9 @@
             }
           }
           //update the image display
-          $('#image_display').html(display_items);
-          // Update the carousel inner HTML with the generated markup
+            document.addEventListener("DOMContentLoaded", function() {
+              document.getElementById("image-display").innerHTML = display_items;
+            });
           //$('#dynamic-carousel').html(carouselItems);
       };
       </script>
@@ -84,7 +85,7 @@
   <body>
     <div id="navbar"></div>
   <main>
-    <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
+    <div id="image-display" class="container text-center overflow-auto p-2 mb-5">
       <h3>Saint-Patrick's at Gerts - 2024 </h3>
     </div>
   </main>
