@@ -34,13 +34,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/Javascript/imageLoader.js"></script>
     <script>
-      // Load navigation bar
-      window.onload = function() {
-        fetch('/navbar.html')
-          .then(response => response.text())
-          .then(html => {
-            document.getElementById('navbar').innerHTML = html;
-            var imageUrls = [
+      var imageUrls = [
               "/images/NightEvents/gerts_stpat/gerts-1.jpg",
               "/images/NightEvents/gerts_stpat/gerts-2.jpg",
               "/images/NightEvents/gerts_stpat/gerts-3.jpg",
@@ -54,6 +48,14 @@
               "/images/NightEvents/gerts_stpat/gerts-11.jpg",
               "/images/NightEvents/gerts_stpat/gerts-12.jpg"
             ];
+            
+      // Load navigation bar
+      window.onload = function() {
+        fetch('/navbar.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+            
             loadImages(imageUrls, 'gerts_stpat');
           });
           // fill modal with images
