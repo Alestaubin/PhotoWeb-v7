@@ -29,6 +29,7 @@
     
     <!-- Custom styles for this template -->
     <link href="/styles.css" rel="stylesheet">
+    <script src="/PhotoWeb-v7/Javascript/imageLoader.js"></script>
     <script>
       // Load navigation bar
       window.onload = function() {
@@ -36,49 +37,23 @@
           .then(response => response.text())
           .then(html => {
             document.getElementById('navbar').innerHTML = html;
-            loadImages();
+            var imageUrls = [
+              "images/NightEvents/gerts_stpat/gerts-1.jpg",
+              "images/NightEvents/gerts_stpat/gerts-2.jpg",
+              "images/NightEvents/gerts_stpat/gerts-3.jpg",
+              "images/NightEvents/gerts_stpat/gerts-4.jpg",
+              "images/NightEvents/gerts_stpat/gerts-5.jpg",
+              "images/NightEvents/gerts_stpat/gerts-6.jpg",
+              "images/NightEvents/gerts_stpat/gerts-7.jpg",
+              "images/NightEvents/gerts_stpat/gerts-8.jpg",
+              "images/NightEvents/gerts_stpat/gerts-9.jpg",
+              "images/NightEvents/gerts_stpat/gerts-10.jpg",
+              "images/NightEvents/gerts_stpat/gerts-11.jpg",
+              "images/NightEvents/gerts_stpat/gerts-12.jpg"
+            ];
+            loadImages(imageUrls, 'gerts_stpat');
           });
       };
-  
-      function loadImages() {
-        var imageUrls = [
-          "/images/NightEvents/gerts_stpat/gerts-1.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-2.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-3.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-4.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-5.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-6.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-7.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-8.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-9.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-10.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-11.jpg",
-          "/images/NightEvents/gerts_stpat/gerts-12.jpg"
-        ];
-  
-        var imageDisplay = document.getElementById('image_display');
-        var currentRow;
-
-        imageUrls.forEach(function(url, index) {
-          if (index % 2 === 0) {
-            currentRow = document.createElement('div');
-            currentRow.className = 'row p-0';
-            imageDisplay.appendChild(currentRow);
-          }
-
-          var img = document.createElement('img');
-          img.src = url;
-          img.alt = 'bda';
-          var link = document.createElement('a');
-          link.href = url;
-          link.target = '_blank';
-          link.appendChild(img);
-          var column = document.createElement('div');
-          column.className = 'col-md p-1';
-          column.appendChild(link);
-          currentRow.appendChild(column);
-        });
-      }
     </script>
   </head>
   <body>
@@ -86,7 +61,6 @@
     <main>
       <div id="image_display" class="container text-center overflow-auto p-2 mb-5">
         <h3>Saint-Patrick's at Gerts - 2024</h3>
-        <div class="row p-0"></div>
       </div>
     </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
