@@ -51,10 +51,11 @@
       //    });
       //}
 
-      function openModal() {
+      function openModal(url) {
         // fill modal with images
         var carouselItems = '';
           for (var i = 0; i < imageUrls.length; i++) {
+            if (imageUrls[i] === url) {
               var activeClass = (i === 0) ? 'active' : ''; // Add 'active' class to the first item
               carouselItems += '<div class="item ' + activeClass + '">';
               carouselItems += '<img src="' + imageUrls[i] + '" alt="...">';
@@ -62,6 +63,7 @@
               // Add caption or other elements if needed
               carouselItems += '</div>';
               carouselItems += '</div>';
+              }
           }
         // Update the carousel inner HTML with the generated markup
         $('#dynamic-carousel').html(carouselItems);
@@ -86,7 +88,7 @@
             
             // Add an event listener to each image to open the modal on click
             img.addEventListener('click', function() {
-                openModal();
+                openModal(url);
             });
 
             var link = document.createElement('a');
