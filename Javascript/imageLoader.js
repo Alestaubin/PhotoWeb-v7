@@ -6,7 +6,7 @@ fetch('/navbar.html')
     .then(html => {
     document.getElementById('navbar').innerHTML = html;
     
-    loadImages(imageUrls, 'gerts_stpat');
+    loadImages(imageUrls, 'Some very nice image, too bad it is not displayed');
     });
     fetchModal();
 };
