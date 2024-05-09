@@ -38,30 +38,61 @@ $('#myModal').modal('show');
 };
 
 function loadImages(imageUrls, altText) {
-var imageDisplay = document.getElementById('image_display');
-var currentRow;
+    var imageDisplay = document.getElementById('image_display');
 
-imageUrls.forEach(function(url, index) {
-    if (index % 2 === 0) {
-        currentRow = document.createElement('div');
-        currentRow.className = 'row p-0';
-        imageDisplay.appendChild(currentRow);
-    }
+    var currentRow = document.createElement('div');
+    currentRow.className = 'row p-0';
+    imageDisplay.appendChild(currentRow);
 
-    var img = document.createElement('img');
-    img.src = url;
-    img.alt = altText;
+    var leftColumn = document.createElement('div');
+    leftColumn.className = 'col-md p-1';
+    currentRow.appendChild(leftColumn);
     
-    // Add an event listener to each image to open the modal on click
-    img.addEventListener('click', function() {
-        openModal(url);
-    });
+    var rightColumn = document.createElement('div');
+    rightColumn.className = 'col-md p-1';
+    currentRow.appendChild(rightColumn);
 
-    var link = document.createElement('a');
-    link.appendChild(img);
-    var column = document.createElement('div');
-    column.className = 'col-md p-1';
-    column.appendChild(link);
-    currentRow.appendChild(column);
-});
+    imageUrls.forEach(function(url, index) {
+        var img = document.createElement('img');
+        img.src = url;
+        img.alt = altText;
+        
+        // Add an event listener to each image to open the modal on click
+        img.addEventListener('click', function() {
+            openModal(url);
+        });
+
+        var link = document.createElement('a');
+        link.appendChild(img);
+
+        if (index % 2 === 0) {
+            leftColumn.appendChild(link);
+        } else {
+            rightColumn.appendChild(link);
+        }
+    });
+    /*
+    imageUrls.forEach(function(url, index) {
+        if (index % 2 === 0) {
+            currentRow = document.createElement('div');
+            currentRow.className = 'row p-0';
+            imageDisplay.appendChild(currentRow);
+        }
+
+        var img = document.createElement('img');
+        img.src = url;
+        img.alt = altText;
+        
+        // Add an event listener to each image to open the modal on click
+        img.addEventListener('click', function() {
+            openModal(url);
+        });
+
+        var link = document.createElement('a');
+        link.appendChild(img);
+        var column = document.createElement('div');
+        column.className = 'col-md p-1';
+        column.appendChild(link);
+        currentRow.appendChild(column);
+    });*/
 }
