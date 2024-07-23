@@ -26,6 +26,8 @@
             ];
     </script>
     <script src="/Javascript/imageLoader.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
   </head>
   <body>
     <div id="navbar"></div>
@@ -34,6 +36,9 @@
     <main>
       <div id="image_display" class="container-fluid text-center overflow-auto p-3">
         <h3>Gone Golfing</h3>
+        <div class="grid" id="image_grid">
+          <div class="grid-sizer"></div>
+        </div>
       </div>
     </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

@@ -15,6 +15,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/Javascript/imageLoader.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
     <script>
       var imageUrls = [
               "/images/NightEvents/gerts_stpat/gerts-1.jpg",
@@ -40,7 +42,11 @@
     <main>
       <div id="image_display" class="container-fluid text-center overflow-auto p-3">
         <h3>Saint-Patrick's at Gerts - 2024</h3>
+        <div class="grid" id="image_grid">
+          <div class="grid-sizer"></div>
       </div>
+      </div>
+      
     </main>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Javascript/script.js"></script>

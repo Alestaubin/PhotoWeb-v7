@@ -29,28 +29,6 @@ main {
   overflow-y: auto;
 }
 
-.b-example-divider {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.bi {
-  vertical-align: -.125em;
-  pointer-events: none;
-  fill: currentColor;
-}
-
-.dropdown-toggle { outline: 0; }
-
-.nav-flush .nav-link {
-  border-radius: 0;
-}
-
 .btn, .btn-toggle {
   display: inline-flex;
   align-items: center;
@@ -114,7 +92,7 @@ main {
 }
 img{
   width: 100%;
-  padding-bottom: 6px;
+  padding-bottom:0;
   border-radius: 2px;
 }
 .header h3{
@@ -128,59 +106,100 @@ img{
   border-bottom: 3px solid #244;
   margin-bottom: 30px;
   margin-top: 30px;
+  background:#ffffff;
 }
 
 .invalid-feedback,
 .empty-feedback {
-  display: none;
+    display: none;
 }
 
 .was-validated :placeholder-shown:invalid ~ .empty-feedback {
-  display: block;
+    display: block;
 }
 
 .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
-  display: block;
+    display: block;
 }
 
 .is-invalid,
 .was-validated :invalid {
-  border-color: #dc3545;
+    border-color: #dc3545;
 }
 .image-container img {
-  -webkit-filter: brightness(100%);
+    -webkit-filter: brightness(100%);
 }
 
 .image-container img:hover {
-  -webkit-filter: brightness(70%);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 }
 .image-container {
-position: relative;
-display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .image-label {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-opacity: 0;
-transition: opacity 0.3s ease;
-font-size: large;
-color: white;
-pointer-events: none; /* This is important to make the label on the image clickable */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: large;
+    color: white;
+    pointer-events: none; /* This is important to make the label on the image clickable */
 }
 
 .image-container:hover .image-label {
-opacity: 1;
+    opacity: 1;
 }
 
 .col {
-  padding-left: 3px;
-  padding-right: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+/* ---- grid ---- */
+.grid {
+    background:#ffffff;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    /* 3 columns by default */
+    width: 33.333%;
+}
+@media screen and (max-width: 1800px) {
+    /* 2 columns */
+    .grid-sizer,
+    .grid-item { width: 50%; }
+}
+
+@media screen and (max-width: 700px) {
+    /* 1 column for smaller screens */
+    .grid-sizer, 
+    .grid-item { width: 100%; }
+}
+
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
 }
