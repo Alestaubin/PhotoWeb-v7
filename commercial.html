@@ -7,125 +7,63 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Alexandre St-Aubin</title>
     <!-- Bootstrap core CSS -->
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-        img {
-            -webkit-filter: brightness(100%);
-        }
-
-        img:hover {
-            -webkit-filter: brightness(70%);
-            -webkit-transition: all 1s ease;
-            -moz-transition: all 1s ease;
-            -o-transition: all 1s ease;
-            -ms-transition: all 1s ease;
-            transition: all 1s ease;
-        }
-        .image-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .image-label {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      font-size: large;
-      color: white;
-    }
-
-    .image-container:hover .image-label {
-      opacity: 1;
-    }
-
-    </style>
-
-    <link href="styles.css" rel="stylesheet">
-
-    <script>
-      // Load navigation bar
-      window.onload = function() {
-          fetch('/navbar.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.getElementById('navbar').innerHTML = html;
-              });
-      };
-    </script>
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+    <script src="/Javascript/albumLoader.js"></script>
   </head>
   <body>
-<!-- Bootstrap Navbar -->
-<div id="navbar"></div>
-<main>
-  <div class="container text-center overflow-auto p-2 pt-5">
-    <div class="row p-0">
-      <div class="col-md p-1">
-          <div class="image-container">
-              <a href="/commercial/hec24.html" id="hec24">
-                <img src="/images/commercial/hec24/G24-HEC-8.jpg" alt="hec24">
-              </a>
-              <label for="vitres" class="image-label">Comité HEC groupe 24</label>
+      <!-- Bootstrap Navbar -->
+      <div id="navbar"></div>
+      <main>
+        <div id="image_display" class="container-fluid text-center overflow-auto p-5 pt-5">
+              <div class="album-grid-item">
+                  <div class="image-container">
+                      <a href="/commercial/hec24.html" id="hec24">
+                        <img src="/images/commercial/hec24/G24-HEC-8.jpg" alt="hec24">
+                      </a>
+                      <label for="vitres" class="image-label">Comité HEC groupe 24</label>
+                  </div>
+              </div>
+
+              <div class="album-grid-item">
+                <div class="image-container">
+                    <a href="/commercial/SSMU_Handbook.html" id="ssmu">
+                      <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-3.jpg" alt="sssmu handbook">
+                    </a>
+                    <label for="ssmu" class="image-label">SSMU Handbook</label>
+                </div>
+              </div>
+
+              <div class="album-grid-item">
+                <div class="image-container">
+                    <a href="/commercial/hec5.html" id="hec">
+                      <img src="/images/commercial/hec5/hec5-10.jpg" alt="HEC Groupe 5">
+                    </a>
+                    <label for="hec" class="image-label">Comité HEC groupe 5</label>
+                </div>
+              </div>
+        
+              <div class="album-grid-item">
+                  <div class="image-container">
+                      <a href="/commercial/vitresEdudiant.html" id="vitres">
+                        <img src="/images/commercial/vitresEtudiant/VitresEtudiant-13.jpg" alt="vitre">
+                      </a>
+                      <label for="vitres" class="image-label">Vitres Étudiants</label>
+                  </div>
+              </div>
+
+              <div class="album-grid-item">
+                  <div class="image-container">
+                      <a href="/commercial/Gerts.html" id="gerts">
+                        <img src="/images/commercial/Gerts/DSCF0632.jpg" alt="gerts">
+                      </a>
+                      <label for="gerts" class="image-label">Gerts Café</label>
+                  </div>
+              </div>
           </div>
-      </div>
-  </div>
-  <div class="row p-0">
-    <div class="col-md p-1">
-      <div class="image-container">
-          <a href="/commercial/SSMU_Handbook.html" id="ssmu">
-            <img src="/images/commercial/SSMU_Handbook_2023/2023_SSMU_Handbook-3.jpg" alt="sssmu handbook">
-          </a>
-          <label for="ssmu" class="image-label">SSMU Handbook</label>
-      </div>
-    </div>
-    <div class="col-md p-1">
-      <div class="image-container">
-          <a href="/commercial/hec5.html" id="hec">
-            <img src="/images/commercial/hec5/hec5-10.jpg" alt="HEC Groupe 5">
-          </a>
-          <label for="hec" class="image-label">Comité HEC groupe 5</label>
-      </div>
-    </div>
-  </div>
-    <div class="row p-0">
-        <div class="col-md p-1">
-            <div class="image-container">
-                <a href="/commercial/vitresEdudiant.html" id="vitres">
-                  <img src="/images/commercial/vitresEtudiant/VitresEtudiant-13.jpg" alt="vitre">
-                </a>
-                <label for="vitres" class="image-label">Vitres Étudiants</label>
-            </div>
-        </div>
-        <div class="col-md p-1">
-            <div class="image-container">
-                <a href="/commercial/Gerts.html" id="gerts">
-                  <img src="/images/commercial/Gerts/DSCF0632.jpg" alt="gerts">
-                </a>
-                <label for="gerts" class="image-label">Gerts Café</label>
-            </div>
-        </div>
-    </div>
-  </div>
-  </main>
-
-    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="/Javascript/script.js"></script>
-
+      </main>
+      <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

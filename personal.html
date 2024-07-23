@@ -7,112 +7,74 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Alexandre St-Aubin</title>
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/styles.css" rel="stylesheet">
-
-    <script>
-      // Load navigation bar
-      window.onload = function() {
-          fetch('/navbar.html')
-              .then(response => response.text())
-              .then(html => {
-                  document.getElementById('navbar').innerHTML = html;
-              });
-      };
-    </script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+    <script src="/Javascript/albumLoader.js"></script>
   </head>
   <body>
       <!-- Bootstrap Navbar -->
-<div id="navbar"></div>
-<main>  
-  <div class="container text-center overflow-auto p-2 pt-5">
-    <div class="row  p-0">
+    <div id="navbar"></div>
+    <main>  
+      <div id="image_display" class="container-fluid text-center overflow-auto p-5 pt-5">
 
-        <div class="col-md p-1">
-          <div class="image-container">
-            <a href="/personnal/golf.html" id="golf">
-              <img src="/images/Personnal/golf/golf-1.jpg" alt="golf">
-            </a>
-            <label for="golf" class="image-label">Gone Golfing</label>
-          </div>
-        </div>
-        <div class="col-md p-1">
-          <div class="image-container">
-            <a href="/personnal/toronto.html" id="toronto">
-              <img src="/images/Personnal/Toronto/2024-07-Toronto-24.jpg" alt="golf">
-            </a>
-            <label for="golf" class="image-label">Toronto</label>
-          </div>
-        </div>
+            <div class="album-grid-item">
+              <div class="image-container">
+                <a href="/personnal/golf.html" id="golf">
+                  <img src="/images/Personnal/golf/golf-1.jpg" alt="golf">
+                </a>
+                <label for="golf" class="image-label">Gone Golfing</label>
+              </div>
+            </div>
 
+            <div class="album-grid-item">
+              <div class="image-container">
+                <a href="/personnal/toronto.html" id="toronto">
+                  <img src="/images/Personnal/Toronto/2024-07-Toronto-24.jpg" alt="golf">
+                </a>
+                <label for="golf" class="image-label">Toronto</label>
+              </div>
+            </div>
+
+
+            <div class="album-grid-item">
+              <div class="image-container">
+                <a href="/personnal/mcgillSummer.html" id="Summer_McGill">
+                  <img src="/images/Personnal/mcgill_summer/mcgill_summer-1.jpg" alt="bda">
+                </a>
+                <label for="Summer_McGill" class="image-label">Summer at McGill</label>
+              </div>
+            </div>
+            
+            <div class="album-grid-item">
+              <div class="image-container">
+                <a href="/personnal/mcgillFall.html" id="mcgill_fall">
+                  <img src="/images/Personnal/mcgill_fall/mcgill_fall-3.jpg" alt="mcgill_fall">
+                </a>
+                <label for="mcgill_fall" class="image-label">Fall at McGill</label>
+              </div>
+            </div>
+          
+            <div class="album-grid-item">
+              <div class="image-container">
+                <a href="/personnal/mcgillWin.html" id="Winter_McGill">
+                  <img src="/images/Personnal/mcgill_winter/24-Winter-mcgill-1.jpg" alt="winter_mcgill">
+                </a>
+                <label for="winter_mcgill" class="image-label">Winter at McGill</label>
+              </div>
+            </div>
+
+            <div class="album-grid-item">
+              <div class="image-container">
+                <a href="/personnal/chiens.html" id="dogs">
+                  <img src="/images/Personnal/dogs/Chiens-11.jpg" alt="dogs">
+                </a>
+                <label for="dogs" class="image-label">Dogs</label>
+              </div>
+            </div>
       </div>
-
-      <div class="row  p-0">
-
-        <div class="col-md p-1">
-          <div class="image-container">
-            <a href="/personnal/mcgillSummer.html" id="Summer_McGill">
-              <img src="/images/Personnal/mcgill_summer/mcgill_summer-1.jpg" alt="bda">
-            </a>
-            <label for="Summer_McGill" class="image-label">Summer at McGill</label>
-          </div>
-        </div>
-        
-        <div class="col-md p-1">
-          <div class="image-container">
-            <a href="/personnal/mcgillFall.html" id="mcgill_fall">
-              <img src="/images/Personnal/mcgill_fall/mcgill_fall-3.jpg" alt="mcgill_fall">
-            </a>
-            <label for="mcgill_fall" class="image-label">Fall at McGill</label>
-          </div>
-        </div>
-      </div>
-      <div class="row  p-0">
-        <div class="col-md p-1">
-          <div class="image-container">
-            <a href="/personnal/mcgillWin.html" id="Winter_McGill">
-              <img src="/images/Personnal/mcgill_winter/24-Winter-mcgill-1.jpg" alt="winter_mcgill">
-            </a>
-            <label for="winter_mcgill" class="image-label">Winter at McGill</label>
-          </div>
-        </div>
-        <div class="col-md p-1">
-          <div class="image-container">
-            <a href="/personnal/chiens.html" id="dogs">
-              <img src="/images/Personnal/dogs/Chiens-11.jpg" alt="dogs">
-            </a>
-            <label for="dogs" class="image-label">Dogs</label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  </body>
-  
-  </html>
-  </main>
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Javascript/script.js"></script>
-
+    </main>   
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
