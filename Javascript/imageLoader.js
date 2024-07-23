@@ -36,43 +36,6 @@ $('#carousel-contents').html(carouselItems);
 // Trigger click event on the button that opens the modal
 $('#myModal').modal('show');
 };
-/*
-function loadImages(imageUrls, altText) {
-    var imageDisplay = document.getElementById('image_display');
-
-    var currentRow = document.createElement('div');
-    currentRow.className = 'row p-0';
-    imageDisplay.appendChild(currentRow);
-
-    var leftColumn = document.createElement('div');
-    leftColumn.className = 'col-md p-1';
-    currentRow.appendChild(leftColumn);
-    
-    var rightColumn = document.createElement('div');
-    rightColumn.className = 'col-md p-1';
-    currentRow.appendChild(rightColumn);
-
-    imageUrls.forEach(function(url, index) {
-        var img = document.createElement('img');
-        img.src = url;
-        img.alt = altText;
-        
-        // Add an event listener to each image to open the modal on click
-        img.addEventListener('click', function() {
-            openModal(url);
-        });
-
-        var link = document.createElement('a');
-        link.appendChild(img);
-
-        if (index % 2 === 0) {
-            leftColumn.appendChild(link);
-        } else {
-            rightColumn.appendChild(link);
-        }
-    });
-}
-*/
 function loadImages(imageUrls, altText) {
     var imageDisplay = document.getElementById('image_grid');
     
