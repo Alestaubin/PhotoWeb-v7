@@ -1,17 +1,27 @@
 
 // Load navigation bar
 window.onload = function() {
-fetch('/navbar.html')
+    loadEverything();
+};
+
+async function loadEverything() {
+    fetch('/navbar.html')
     .then(response => response.text())
     .then(html => {
-    document.getElementById('navbar').innerHTML = html;
-    
-    loadImages(imageUrls, 'A very nice image, too bad it is not displayed');
+        document.getElementById('navbar').innerHTML = html;            
+    });
+
+    await loadImages(imageUrls, 'A very nice image, too bad it is not displayed');
+    // wait
+
+    fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('footer').innerHTML = html;
     });
 
     fetchModal();
-};
-
+}
 function fetchModal() {
 fetch('/modal.html')
     .then(response => response.text())
@@ -37,7 +47,7 @@ $('#carousel-contents').html(carouselItems);
 // Trigger click event on the button that opens the modal
 $('#myModal').modal('show');
 };
-function loadImages(imageUrls, altText) {
+async function loadImages(imageUrls, altText) {
     var imageDisplay = document.getElementById('image_grid');
     
     imageUrls.forEach(function(url, index) {
@@ -73,4 +83,5 @@ function loadImages(imageUrls, altText) {
         // layout Masonry after each image loads
         msnry.layout();
     });
+    return;
 }

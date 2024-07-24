@@ -1,11 +1,26 @@
 
 // Load navigation bar
 window.onload = function() {
+    loadEverything();
+};
+
+async function loadEverything() {
     fetch('/navbar.html')
-        .then(response => response.text())
-        .then(html => {
-        document.getElementById('navbar').innerHTML = html;
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('navbar').innerHTML = html;            
+    });
+
+    await load_albums();
+    // wait
     
+    fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('footer').innerHTML = html;
+    });
+}
+async function load_albums() {
     //call masonry
     var grid = document.querySelector('.album-grid');
 
@@ -19,5 +34,5 @@ window.onload = function() {
         // layout Masonry after each image loads
         msnry.layout();
     });
-    });
+    return;
 }
